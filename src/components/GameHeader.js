@@ -6,7 +6,7 @@ export default function GameHeader(props){
         <nav>
             <ul>
                 <li>WHAT?</li>
-                <li onClick={props.onClick}><a href="#">+NEW GAME</a></li>
+                <li><button onClick={props.onClick}>+NEW GAME</button></li>
             </ul>
         </nav>
     )
