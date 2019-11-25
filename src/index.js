@@ -1,11 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import * as serviceWorker from "./serviceWorker";
-import HotOrCold from "./HotOrCold";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import store from './store';
+import './index.css';
+import * as serviceWorker from './serviceWorker';
+import HotOrCold from './HotOrCold';
 ReactDOM.render(
-  <HotOrCold numberToGuess={Math.floor(Math.random() * 101)} />,
-  document.getElementById("root")
+  <Provider store={store}>
+    <HotOrCold numberToGuess={Math.floor(Math.random() * 101)} />
+  </Provider>,
+  document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change

@@ -1,8 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-export default function GuessFeedback(props){
-    return(
-        <h3>{props.feedback}</h3>
-    )
-    
+function GuessFeedback(props) {
+  return <h3>{props.feedback}</h3>;
 }
+
+const mapStateToProps = state => ({
+  feedback: state.feedback
+});
+
+export default connect(mapStateToProps)(GuessFeedback);
